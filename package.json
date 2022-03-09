@@ -1,0 +1,24 @@
+{
+  "name": "@anomalyce/data-table",
+  "version": "1.0.0-alpha.1",
+  "description": "Vue 3 based data-table component.",
+  "author": "Anomalyce",
+  "license": "MIT",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anomalyce/data-table.git"
+  },
+  "keywords": [
+    "anomalyce",
+    "data-table",
+    "vue"
+  ],
+  "dependencies": {
+    "vue": "~3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/anomalyce/data-table/issues"
+  },
+  "homepage": "https://github.com/anomalyce/data-table#readme"
+}
