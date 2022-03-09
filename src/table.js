@@ -1,5 +1,5 @@
 import { h, ref, computed, defineComponent } from 'vue'
-import wrap from './row'
+import { wrap } from './helpers'
 
 export default defineComponent({
   name: '@anomalyce/data-table',

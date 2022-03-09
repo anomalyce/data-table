@@ -1,6 +1,6 @@
-import table from './table'
-import heading from './heading'
-import item from './item'
+import table from './src/table'
+import heading from './src/heading'
+import item from './src/item'
 
 export default {
   table,
