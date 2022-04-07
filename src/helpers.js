@@ -1,11 +1,10 @@
-import { h } from 'vue'
+export const uniqueKey = () => {
+  const s4 = () => {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1)
+  }
 
-export const wrap = (nodes, className, useStyles) => {
-  return h('div', {
-    style: (useStyles ? { display: 'contents' } : undefined),
-    class: {
-      'data-table-row': true,
-      [className]: className !== undefined,
-    },
-  }, nodes)
+  return `${s4()}${s4()}-${s4()}${s4()}-${s4()}${s4()}` 
 }
+

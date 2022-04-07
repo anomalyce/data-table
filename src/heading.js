@@ -17,22 +17,24 @@ export default defineComponent({
 
   setup (props, context) {
     const dataTable = computed(() => getCurrentInstance().parent)
-
+    
     if (dataTable.value.type.name !== '@anomalyce/data-table') {
       throw new Error('The <data-table.heading /> component must be a direct child of the <data-table.table /> component.')
     }
 
-    return () => {  
-      const options = {
-        ...context.attrs,
-        key: props.name,
-        'data-table-heading': props.name,
-        class: {
-          'data-table-heading': true,
-          [context.attrs?.class || '']: true,
-        },
-      }
+    const tableKey = computed(() => dataTable.value.exposed.key)
 
+    const options = {
+      ...context.attrs,
+      key: `${tableKey}/heading/${props.name}`,
+      'data-table-heading': props.name,
+      class: {
+        'data-table-heading': true,
+        [context.attrs?.class || '']: true,
+      },
+    }
+
+    return () => {
       return h('div', options, context.slots.default({
         //
       }))
